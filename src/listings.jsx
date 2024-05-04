@@ -19,7 +19,7 @@ export default function Listings({ handleInc, handleDec }) {
             {/* If img.sale is true button is Add to Cart the badge sale is Visible   */}
             {img.sale ? (
               <span className="badge position-absolute top-0 end-0 w-3 text-bg-dark">
-                Dark
+                Sale
               </span>
             ) : (
               <span>
