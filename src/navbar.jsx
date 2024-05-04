@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import darkcarticon from "/darkcarticon.svg";
 import "./App.css";
 import { useState } from "react";
-import whitecarticon from "../public/whitecarticon.svg";
+import whitecarticon from "/whitecarticon.svg";
 function clickOncart(e) {
   e.preventDefault();
 }
@@ -79,7 +79,9 @@ export default function Navbar({ count }) {
                 onMouseOut={() => setOnover(darkcarticon)}
                 type="submit"
               >
-                <img width="20px" alt="carticon" src={over} />
+                <img width="20px" alt="carticon" src={over}
+                onMouseEnter={() => setOnover(whitecarticon)}
+                onMouseOut={() => setOnover(darkcarticon)} />
                 &nbsp; Cart &nbsp;
                 {/* count displayed */}
                 <span className="badge bg-dark text-white ms-1 rounded-pill">
